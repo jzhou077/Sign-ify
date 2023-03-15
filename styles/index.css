@@ -1,5 +1,8 @@
-body {
+:root {
     font-family: 'Merriweather', serif;
+}
+
+body {
     box-sizing: border-box;
     background-size: cover;
 }
@@ -67,4 +70,10 @@ body {
     background-color: white;
     color: #434545;
     letter-spacing: 2px;
+}
+
+@media screen and (max-width: 1024px) {
+    .mainText {
+        font-size: 3.5rem;
+    }
 }

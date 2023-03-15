@@ -1,0 +1,26 @@
+:root {
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+#landing {
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+@media screen and (max-width: 820px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
