@@ -17,9 +17,9 @@ $(document).ready(function() {
         pin: true,
     });
 
-    tl.to(["#hero-heading", ".scroll-indicator"], {
+    tl.to(["#hero h1", ".scroll-indicator"], {
         scrollTrigger: {
-            trigger: "#hero-heading",
+            trigger: "#hero h1",
             start: "center center",
             end: "+=100%",
         },
@@ -27,9 +27,9 @@ $(document).ready(function() {
         autoAlpha: 0
     });
 
-    tl.from("#hero-content", {
+    tl.from("#hero p", {
         scrollTrigger: {
-            trigger: "#hero-heading",
+            trigger: "#hero h1",
             start: "center 25%",
             end: "+=100%",
         },
@@ -37,13 +37,21 @@ $(document).ready(function() {
         autoAlpha: 0,
     });
 
-    tl.from("#sec1", {
+    tl.from("#sec1 .img-container", {
         scrollTrigger: {
-            trigger: "#hero-content",
-            start: "150% center",
-            markers: true,
+            trigger: "#sec1",
+            start: "top bottom",
+            end: "top top",
+            pin: false,
         },
-        yPercent: 100,
+        opacity: 0,
+    });
+
+    ScrollTrigger.create({
+        trigger: "#sec1",
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
     })
-    
+
 });

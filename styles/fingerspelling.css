@@ -24,7 +24,7 @@ body {
 
 .instructions-content {
     position: relative;
-    top: 57.5%;
+    top: 55%;
     left: 50%;
     translate: -50% -50%;
     display: flex;
