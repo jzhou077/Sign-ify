@@ -1,31 +1,32 @@
-:root {
-    font-family: 'Merriweather', serif;
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1 1.25;
+    }
+
+    to {
+        rotate: 360deg;
+    }
 }
 
-body {
-    box-sizing: border-box;
-    background-size: cover;
-}
-
-/* .blob {
+.blob {
     background-color: white;
-    height: 300px;
-    width: 300px;
+    /* background: linear-gradient(to right, aquamarine, mediumpurple); */
+    height: 200px;
+    width: 200px;
+    opacity: 0.5;
     position: absolute;
     left: 50%;
     top: 50%;
     translate: -50% -50%;
     border-radius: 50%;
-    z-index: 2;
+    animation: rotate 20s infinite;
+    filter: blur(130px);
+    z-index: 1;
 }
-
-.blur {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    backdrop-filter: blur(200px);
-} */
 
 .mainSection {
     position: fixed;
@@ -34,21 +35,71 @@ body {
     height: 100%;
     width: 100%;
     background-size: cover;
+    background-color: var(--dark-bg-color);
 }
 
 .mainContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
     position: relative;
-    top: 50%;
+    top: 55%;
     left: 50%;
     translate: -50% -50%;
     text-align: center;
     box-sizing: border-box;
     padding: 0px 100px;
+    z-index: 2;
 }
 
-.mainText {
+.mainContent h1 {
     font-size: 4rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px white;
+    margin: 0;
+}
+
+/* splits "Silence" in the h1 tag on hover */
+#splitText > .letter {
+    display: inline-block;
+    transition: transform 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#splitText:hover > .letter:nth-child(1) {
+    transform: translate(-40%, -30%) rotate(8deg);
+}
+
+#splitText:hover > .letter:nth-child(2) {
+    transform: translate(-40%, 20%) rotate(4deg);
+}
+
+#splitText:hover > .letter:nth-child(3) {
+    transform: translate(-10%, 60%) rotate(-6deg);
+}
+
+#splitText:hover > .letter:nth-child(4) {
+    transform: translate(-0%, 8%) rotate(-8deg);
+}
+
+#splitText:hover > .letter:nth-child(5) {
+    transform: translate(0%, -20%) rotate(5deg);
+}
+
+#splitText:hover > .letter:nth-child(6) {
+    transform: translate(0%, 20%) rotate(-3deg);
+}
+
+#splitText:hover > .letter:nth-child(7) {
+    transform: translate(0%, -40%) rotate(-5deg);
+}
+
+.mainContent p {
+    font-size: 2rem;
     font-weight: 100;
+    margin: 35px 0 30px 0;
+    max-width: 900px;
 }
 
 .learnBtn {
@@ -64,16 +115,21 @@ body {
     border-radius: 2px;
     cursor: pointer;
     transition-duration: 0.5s;
+    align-self: center;
 }
 
 .learnBtn:hover {
     background-color: white;
-    color: #434545;
+    color: var(--dark-bg-color);
     letter-spacing: 2px;
 }
 
-@media screen and (max-width: 1024px) {
-    .mainText {
-        font-size: 3.5rem;
+@media screen and (max-width: 1368px) {
+    .mainContent h1 {
+        font-size: 3rem;
+    }
+
+    .mainContent p {
+        font-size: 1.5rem;
     }
 }

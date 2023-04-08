@@ -1,0 +1,211 @@
+body {
+    overflow-x: hidden;
+}
+
+#instructions {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+}
+
+#instructions::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-bg-color);
+    opacity: 0.95;
+}
+
+.instructions-content {
+    position: relative;
+    top: 57.5%;
+    left: 50%;
+    translate: -50% -50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 0 100px;
+}
+
+.instructions-content > h1 {
+    font-size: 4rem;
+}
+
+.instructions-content > p {
+    font-size: 1.5rem;
+    max-width: 900px;
+    margin: 35px 0 30px 0;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    border-radius: 2em;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    background-color: white;
+    color: var(--dark-bg-color);
+    letter-spacing: 2px;
+}
+
+#camera-btn {
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    border-width: 2px;
+    align-self: center;
+}
+
+#close-instructions-btn {
+    padding: 5px 20px;
+    font-size: 1rem;
+    align-self: center;
+    display: none;
+    margin-top: 40px;
+}
+
+#main-section {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dark-bg-color);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    text-align: center;
+}
+
+#chosen-word {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+.letter {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.video-container {
+    margin: 0 0 10px 0;
+    width: 480px;
+    height: 360px;
+}
+
+.video-holder {
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 480px;
+    height: 360px;
+    overflow: hidden;
+}
+
+#webcam {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#output-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#open-instructions-btn {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+#open-instructions-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.up-arrow {
+    position: relative;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    animation: move-down 2s ease-in-out infinite;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textfield {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Merriweather', serif;
+    width: 70%;
+    padding: 5px 5px;
+}
+
+.spell-btn {
+    width: 20%;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+@keyframes big-text-anim {
+    from {
+        left: -200%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.big-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 17.5vw;
+    letter-spacing: 1vw;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    opacity: 0.2;
+    z-index: 0;
+    animation: big-text-anim 40s linear infinite;
+}

@@ -9,10 +9,20 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Orbitron:wght@500&display=swap" rel="stylesheet">
-        <title>Sign-ify</title>
+        <title>Sign-ify | Learn</title>
     </head>
 
     <body>
+        <div class="preloader"></div>
+
+        <div class="menu-btn">
+            <span>Menu</span>
+            <div class="outer-menu-icon">
+                <div class="inner-menu-icon">
+                </div>
+            </div>
+        </div>
+
         <div class="menu">
             <div class="menu-main-sec">
                     <nav class="nav-links">
@@ -21,16 +31,16 @@
                                 <a href="index.html">Home</a>
                             </li>
                             <li class="navigation-item">
-                                <a href="learn.html">The Issue</a>
+                                <a href="learn.html">Learn</a>
                             </li>
                             <li class="navigation-item">
-                                <a href="#">Learn ASL</a>
+                                <a href="asl.html">Sign Language</a>
                             </li>
                             <li class="navigation-item">
-                                <a href="#">Fingerspelling</a>
+                                <a href="fingerspelling.html">Fingerspelling</a>
                             </li>
                         </ul>
-                        <ul class="secondary-nav-links">
+                        <!-- <ul class="secondary-nav-links">
                             <li>
                                 <a href="#">About Me</a>
                             </li>
@@ -40,36 +50,63 @@
                             <li>
                                 <a href="#">Dictionary</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </nav>
                 </div>
             </div>
         </div>
 
-        <section id="landing">
-            <div class="navigation">
-                <div class="nav-content">
-                    <div class="logo">
-                        <a href="index.html">Sign-ify</a>
-                    </div>
-                    <div class="menu-btn">
-                        <span>Menu</span>
-                        <div class="outer-menu-icon">
-                            <div class="inner-menu-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="landingText">
+        <section id="hero">
+            
+            <div class="hero-main-content">
                 <h1>The Issue</h1>
+                <p class="hero-main-text">Did you know that there are <b>430 million</b> people currently living with disabling hearing loss? Shockingly, by 2050, this number is projected to soar to over <b>700 million</b>. Despite its alarming prevalence, it is a widely overlooked issue.</p>
+                <p class="hero-secondary-text">Scroll down to learn more!</p>
+                <div class="down-arrow"></div>
             </div>
         </section>
 
+        <section id="sec1">
+            <div class="sec1-content">
+                <h1>Hearing Loss</h1>
+                <p>Having hearing loss doesn't mean you're deaf. It means that you're not able to hear as well as someone with normal hearing. Specifically, you aren't able to hear thresholds of 20 decibels or better in both ears. As you can imagine, hearing loss is like a spectrum, it may be anywhere from mild to profound. Hard of hearing refers specifically to people with mild to severe hearing loss. They are usually able to communicate through spoken language and are able to benefit from hearing aids and other assistive devices. Those who are deaf have profound hearing loss, meaning they have very little or no hearing. Often, they rely on sign language for communication.</p>
+            </div>
+        </section>
+
+        <section id="sec2">
+            <h1>So,<br>Why Is Awareness Important?</h1>
+        </section>
+
+        <div class="horizontal-scroll-wrapper">
+            <div class="horizontal-scroll-container">
+                <section id="sec3">
+                    <div class="horizontal-content">
+                        <h1>Preventability</h1>
+                        <p>Noise-induced hearing loss is a serious and preventable problem that affects millions of Americans. Around <b>5.2 million</b> children and adolescents and <b>26 million</b> adults in the U.S. have permanent hearing loss due to excessive noise exposure and lousy listening habits. 50% of people aged 12 to 35 use personal audio devices at volumes that pose a risk to their hearing. Exposure to other sources of loud noise, such as sirens, lawnmowers, and power tools, can also lead to hearing damage. To protect your hearing, it's important to be aware. Limit your exposure to loud sounds, turn down the volume of your music, move away from loud noise if possible, and use hearing protection equipment when not possible.</p>
+                    </div>        
+                </section>
+
+                <section id="sec4">
+                    <div class="horizontal-content">
+                        <h1 class="anim">Neglected Needs</h1>
+                        <p class="anim">Unaddressed hearing loss can significantly impact various aspects of an individual's life. It may cause social isolation, hinder communication, and reduce the likelihood of receiving an education or employment. This is especially true for the majority of deaf-born children. Over 90% of them are born to hearing parents who may lack understanding on how to care for their child's hearing loss. As a result, they may not provude enough support in addressing their child's needs, which can lead to unnecessary hardships. To ensure that a child with hearing loss receives the necessary support, seeking the advice and expertise of professionals is crucial!</p>
+                    </div>
+                </section>
+                
+                <section id="sec5">
+                    <div class="horizontal-content">
+                        <h1 class="anim">Break the Communication Barrier!</h1>
+                        <p class="anim">An estimated 2 million American adults suffer from deafness, and many can only communicate through American Sign Language (ASL). Consequently, they may have difficulties communicating with hearing individuals and feel isolated from society. To achieve unity, it's crucial that we understand the hardships of others and break this communication barrier! Just learning the letters of the alphabet in ASL enables one to fingerspell (spelling out words with ASL letters), which helps to better communicate with deaf individuals.</p>
+                        <a href="asl.html" class="asl-btn anim">Explore ASL</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <script src="scripts/index.js"></script>
-        <script src="scripts/general.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+        <script src="scripts/learn.js"></script>
+        <script src="scripts/general.js"></script>
     </body>
 </html>

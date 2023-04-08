@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles/fingerspelling.css" rel="stylesheet">
+        <link href="styles/general.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+        <title>Sign-ify | Fingerspelling</title>
+    </head>
+
+    <body>
+        <div class="preloader"></div>
+        <div class="menu-btn">
+            <span>Menu</span>
+            <div class="outer-menu-icon">
+                <div class="inner-menu-icon">
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-main-sec">
+                    <nav class="nav-links">
+                        <ul class="primary-nav-links">
+                            <li class="navigation-item">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="navigation-item">
+                                <a href="learn.html">Learn</a>
+                            </li>
+                            <li class="navigation-item">
+                                <a href="asl.html">Sign Language</a>
+                            </li>
+                            <li class="navigation-item">
+                                <a href="fingerspelling.html">Fingerspelling</a>
+                            </li>
+                        </ul>
+                        <!-- <ul class="secondary-nav-links">
+                            <li>
+                                <a href="#">About Me</a>
+                            </li>
+                            <li>
+                                <a href="#">Sources</a>
+                            </li>
+                            <li>
+                                <a href="#">Dictionary</a>
+                            </li>
+                        </ul> -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div id="instructions">
+            <div class="instructions-content">
+                <h1>Getting Started</h1>
+                <p>This page requires permission to use your camera. Once loaded in, enter a word you'd like to fingerspell (up to 10 characters) in the text section and click the "spell" button to begin practicing! Note that motion letters (i.e. "j" and "z") are not supported.</p>   
+                <button id="camera-btn">Enable Camera</button>
+                <button id="close-instructions-btn">Got it!</button>
+            </div>
+        </div>
+
+        <section id="main-section">
+            <div class="big-text">Fingerspelling</div>
+            <div class="main-content">
+                <h1 id="chosen-word"></h1>
+                <div class="video-container">
+                    <div class="video-holder">
+                        <video autoplay muted playsinline id="webcam"></video>
+                        <!-- canvas is used to map the landmarks on the hand -->
+                        <canvas id="output-canvas" width="1280px" height="720px"></canvas>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <input class="textfield" type="text" placeholder="Enter a word">
+                    <button class="spell-btn">Spell</button>
+                </div>
+            </div>
+            <div id="open-instructions-btn">
+                <div class="up-arrow"></div>
+                <p>Need Help?</p>
+            </div>
+        </section>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision/vision_bundle.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+        <script type="module" src="scripts/fingerspelling.js"></script>
+        <script src="scripts/general.js"></script>
+    </body>
+</html>

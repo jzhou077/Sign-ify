@@ -1,0 +1,111 @@
+body {
+    overflow-x: hidden;
+}
+
+#hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark-bg-color);
+    text-align: center;
+    padding: 0 100px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.25;
+    z-index: 1;
+}
+
+.hero-video {
+    object-fit: cover;
+    filter: grayscale();
+}
+
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.big-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 8vw;
+    inline-size: 80%;
+    z-index: 2;
+}
+
+@keyframes move-down-arrow {
+    from {
+        transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+.down-arrow {
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    animation: move-down-arrow 2s ease-in-out infinite;
+}
+
+@keyframes blinking-text {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.scroll-indicator p {
+    margin-bottom: 10px;
+    animation: blinking-text 2s ease-in-out infinite;
+}
+
+#hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 1.5rem;
+    inline-size: 75%;
+    z-index: 2;
+}
+
+#sec1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark-bg-color);
+    background-image: url("../images/asl-sec1.jpeg");
+    background-size: cover;
+    filter: grayscale();
+}
