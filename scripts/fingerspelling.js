@@ -14,7 +14,7 @@ async function loadModel() {
     );
     gestureRecognizer = await GestureRecognizer.createFromOptions(vision, {
         baseOptions: {
-            modelAssetPath: "../scripts/ASL_Recognizer.task"
+            modelAssetPath: "scripts/ASL_Recognizer.task"
         },
         numHands: 1
     });
