@@ -27,7 +27,7 @@ $(document).ready(function() {
         autoAlpha: 0
     });
 
-    tl.from("#hero p", {
+    tl.from("#hero > p", {
         scrollTrigger: {
             trigger: "#hero h1",
             start: "center 25%",

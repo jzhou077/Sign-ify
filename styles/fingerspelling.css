@@ -70,14 +70,6 @@ button:hover {
     align-self: center;
 }
 
-#close-instructions-btn {
-    padding: 5px 20px;
-    font-size: 1rem;
-    align-self: center;
-    display: none;
-    margin-top: 40px;
-}
-
 #main-section {
     height: 100vh;
     width: 100vw;
@@ -139,31 +131,6 @@ button:hover {
     left: 0;
 }
 
-#open-instructions-btn {
-    position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    transition-duration: 0.5s;
-}
-
-#open-instructions-btn:hover {
-    cursor: pointer;
-    opacity: 0.5;
-}
-
-.up-arrow {
-    position: relative;
-    left: 50%;
-    width: 15px;
-    height: 15px;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    animation: move-down 2s ease-in-out infinite;
-    transform: translateX(-50%) rotate(45deg);
-}
-
 .input-container {
     display: flex;
     justify-content: space-between;
@@ -208,4 +175,63 @@ button:hover {
     opacity: 0.2;
     z-index: 0;
     animation: big-text-anim 40s linear infinite;
+}
+
+#asl-letters {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--dark-bg-color) url("../images/asl-letters.png") no-repeat center;
+    z-index: 98;
+}
+
+#open-letters-btn {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+#open-letters-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.up-arrow {
+    position: relative;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+#close-letters-btn {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition-duration: 0.5s;
+    z-index: 98;
+}
+
+#close-letters-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.down-arrow {
+    position: relative;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transform: translateX(-50%) rotate(225deg);
 }

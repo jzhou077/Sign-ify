@@ -112,9 +112,9 @@ function splitLetters(text, target) {
 $(window).on("load", function() {
     let tl = gsap.timeline({ease: "slow"});
     tl.to(".preloader", {autoAlpha: 0, delay: 0.5, duration: 1});
-    tl.from(".menu-btn", {autoAlpha: 0, yPercent: -10, duration: 0.5});
+    tl.from(".menu-btn", {autoAlpha: 0, yPercent: -10, duration: 0.5}, "together");
     //"getting started" section, handles the slide down and the close button
-    tl.from("#instructions", {yPercent: 100, duration: 1});
+    tl.from("#instructions", {yPercent: 100, duration: 1}, "together");
 });
 
 $(document).ready(function(){
@@ -130,12 +130,14 @@ $(document).ready(function(){
         });
     }
 
-    $("#close-instructions-btn").click(function() {
-        gsap.to("#instructions", {yPercent: 100, duration: 1});
-    })
-    $("#open-instructions-btn").click(function() {
-        gsap.to("#instructions", {yPercent: 0, duration: 1});
+    $("#open-letters-btn").click(function() {
+        gsap.to("#asl-letters", {top: "0", duration: 1, ease: "none", delay: 0});
+
     });
+
+    $("#close-letters-btn").click(function() {
+        gsap.to("#asl-letters", {top: "100%", duration: 1, ease: "none", delay: 0});
+    })
 
     //sets the inital word of "learn" for the user to practice
     splitLetters("learn", "chosen-word");
