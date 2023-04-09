@@ -17,16 +17,6 @@ body {
     margin: 0px;
 }
 
-h1 {
-    font-size: 4rem;
-    margin: 0;
-}
-
-p {
-    font-size: 1rem;
-    margin: 0;
-}
-
 .preloader {
     position: fixed;
     top: 0;
@@ -45,8 +35,8 @@ a {
 
 .menu-btn {
     position: fixed;
-    top: 5rem;
-    right: 7.5rem;
+    top: 10%;
+    right: 10%;
     font-family: 'Orbitron', sans-serif;
     display: flex;
     align-items: center;
