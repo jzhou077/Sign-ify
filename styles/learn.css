@@ -6,6 +6,14 @@ section {
     z-index: 1;
 }
 
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
 #hero {
     position: relative;
     padding: 0 100px;
@@ -25,17 +33,17 @@ section {
     translate: -50% -50%;
 }
 
-.hero-main-content h1 {
-    font-size: 5rem;
+.hero-main-content > h1 {
+    font-size: 4rem;
     letter-spacing: 2.5px;
     text-shadow: 2px 5px black;
 }
 
 .hero-main-text {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     letter-spacing: 1px;
-    max-width: 900px;
-    margin: 1em 0;
+    inline-size: 75vw;
+    margin: 20px 0;
 }
 
 .hero-secondary-text {
@@ -100,6 +108,7 @@ section {
     border-radius: 2em;
     color: var(--dark-secondary-color);
     font-size: 1.25rem;
+    inline-size: 75vw;
 }
 
 .sec1-content > p::before {
@@ -154,16 +163,16 @@ section {
     padding: 20vw 10vw;
 }
 
-.horizontal-content h1 {
+.horizontal-content > h1 {
     position: relative;
-    font-size: 2rem;
+    font-size: 2.5rem;
     opacity: 1;
     text-shadow: 2px 5px black;
 }
 
-.horizontal-content p {
+.horizontal-content > p {
     position: relative;
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-align: justify;
     color: var(--light-secondary-color);
     width: 75%;
@@ -189,7 +198,7 @@ section {
 
 .horizontal-content {
     position: absolute;
-    top: 55%;
+    top: 50%;
     transform: translateY(-50%);
 }
 
@@ -206,8 +215,7 @@ section {
     color: white;
     font-family: 'Merriweather', serif;
     letter-spacing: 1px;
-    border-color: white;
-    border-style: solid;
+    border: 2px solid white;
     border-radius: 2px;
     cursor: pointer;
     transition-duration: 0.5s;
@@ -217,4 +225,117 @@ section {
     background-color: white;
     color: var(--dark-bg-color);
     letter-spacing: 2px;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1368px) {
+    .hero-main-content > h1 {
+        font-size: 3rem;
+    }
+    .hero-main-text {
+        font-size: 1.5rem;
+    }
+    
+    .hero-secondary-text {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 959px) {
+    .hero-main-content > h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-main-text {
+        font-size: 1.25rem;
+    }
+    
+    .hero-secondary-text {
+        font-size: 1rem;
+    }
+
+    .sec1-content > h1 {
+        font-size: 2.5rem;
+    }
+    
+    .sec1-content > p {
+        font-size: 1rem;
+    }
+
+    #sec2 > h1 {
+        font-size: 4rem;
+    }
+
+    .horizontal-content > h1 {
+        font-size: 2rem;
+    }
+
+    .horizontal-content > p {
+        font-size: 1rem;
+    }
+
+    .horizontal-content > a {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 750px) {
+    .horizontal-content > h1 {
+        font-size: 2rem;
+    }
+
+    .horizontal-content > p {
+        font-size: 0.9rem;
+    }
+
+    #sec5 h1 {
+        font-size: 1.75rem;
+    }
+
+    .horizontal-content > a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #hero {
+        padding: 0 50px;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 399px) {
+    .hero-main-content > h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-main-text {
+        font-size: 1rem;
+    }
+    
+    .hero-secondary-text {
+        font-size: 0.75rem;
+    }
+
+    .sec1-content > h1 {
+        font-size: 2rem;
+    }
+    
+    .sec1-content > p {
+        font-size: 0.75rem;
+    }
+
+    #sec2 > h1 {
+        font-size: 2.25rem;
+    }
+
+    .horizontal-content > h1 {
+        font-size: 1.5rem;
+    }
+
+    .horizontal-content > p {
+        font-size: 0.8rem;
+    }
+
+    .horizontal-content > a {
+        font-size: 0.9rem;
+    }
 }

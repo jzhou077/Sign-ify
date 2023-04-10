@@ -2,6 +2,14 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
 #instructions {
     position: fixed;
     top: 0;
@@ -24,7 +32,7 @@ body {
 
 .instructions-content {
     position: relative;
-    top: 55%;
+    top: 50%;
     left: 50%;
     translate: -50% -50%;
     display: flex;
@@ -174,7 +182,7 @@ button:hover {
     -webkit-text-stroke: 1px #ffffff;
     opacity: 0.2;
     z-index: 0;
-    animation: big-text-anim 40s linear infinite;
+    animation: big-text-anim 20s linear infinite;
 }
 
 #asl-letters {
@@ -234,4 +242,62 @@ button:hover {
     border-top: 2px solid white;
     border-left: 2px solid white;
     transform: translateX(-50%) rotate(225deg);
+}
+
+@media screen and (min-width: 750px) and (max-width: 1368px) {
+    .instructions-content {
+        padding: 0 80px;
+    }
+    .instructions-content > h1{
+        font-size: 3rem;
+    }
+    .instructions-content > p {
+        font-size: 1.25rem;
+    }
+    #camera-btn {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 749px) {
+    .instructions-content {
+        padding: 0 50px;
+    }
+    .instructions-content > h1{
+        font-size: 2.5rem;
+    }
+    .instructions-content > p {
+        font-size: 1.1rem;
+    }
+    #camera-btn {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 399px) {
+    .instructions-content {
+        padding: 0 20px;
+    }
+    .instructions-content > h1{
+        font-size: 2rem;
+    }
+    .instructions-content > p {
+        font-size: 1rem;
+    }
+    #camera-btn {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #chosen-word {
+        font-size: 3rem;
+    }
+    .video-container, .video-holder {
+        width: 280px;
+        height: 210px;
+    }
+    .spell-btn {
+        font-size: 0.8rem;
+    }
 }

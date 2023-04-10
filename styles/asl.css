@@ -2,6 +2,14 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
 #hero {
     width: 100vw;
     height: 100vh;
@@ -92,7 +100,7 @@ body {
     left: 50%;
     translate: -50% -50%;
     font-size: 2rem;
-    inline-size: 75%;
+    inline-size: 75vw;
     z-index: 2;
 }
 
@@ -141,10 +149,78 @@ body {
 
 #sec1-content > p {
     font-size: 1.5rem;
-    inline-size: 125%;
+    inline-size: 75vw;
     margin: 20px;
 }
 
 #sec1-content a {
     text-decoration: underline;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1368px) {
+    #hero > p {
+        font-size: 1.5rem;
+    }
+    
+    #sec1-content > h1 {
+        font-size: 3rem;
+    }
+
+    #sec1-content > p {
+        font-size: 1.25rem;
+        inline-size: 80vw;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 959px) {
+    #hero > p {
+        font-size: 1.25rem;
+    }
+
+    #sec1-content > h1 {
+        font-size: 2.5rem;
+    }
+
+    #sec1-content > p {
+        font-size: 1.1rem;
+        inline-size: 85vw;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 749px) {
+    #hero > p {
+        font-size: 1.25rem;
+    }
+
+    #sec1 {
+        padding: 0 50px;
+    }
+
+    #sec1-content > h1 {
+        font-size: 2rem;
+    }
+
+    #sec1-content > p {
+        font-size: 1rem;
+        inline-size: 85vw;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 399px) {
+    #hero > p {
+        font-size: 1rem;
+    }
+    
+    #sec1 {
+        padding: 0 10px;
+    }
+
+    #sec1-content > h1 {
+        font-size: 1.5rem;
+    }
+
+    #sec1-content > p {
+        font-size: 0.9rem;
+        inline-size: 90vw;
+    }
 }

@@ -68,37 +68,41 @@ p {
     z-index: 2;
 }
 
+#splitText {
+    display: inline-block;
+}
+
 /* splits "Silence" in the h1 tag on hover */
-#splitText > .letter {
+.mainContent > h1 > #splitText > .letter {
     display: inline-block;
     transition: transform 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-#splitText:hover > .letter:nth-child(1) {
+.mainContent > h1:hover > #splitText > .letter:nth-child(1) {
     transform: translate(-40%, -30%) rotate(8deg);
 }
 
-#splitText:hover > .letter:nth-child(2) {
+.mainContent > h1:hover > #splitText > .letter:nth-child(2) {
     transform: translate(-40%, 20%) rotate(4deg);
 }
 
-#splitText:hover > .letter:nth-child(3) {
+.mainContent > h1:hover > #splitText > .letter:nth-child(3) {
     transform: translate(-10%, 60%) rotate(-6deg);
 }
 
-#splitText:hover > .letter:nth-child(4) {
+.mainContent > h1:hover > #splitText > .letter:nth-child(4) {
     transform: translate(-0%, 8%) rotate(-8deg);
 }
 
-#splitText:hover > .letter:nth-child(5) {
+.mainContent > h1:hover > #splitText > .letter:nth-child(5) {
     transform: translate(0%, -20%) rotate(5deg);
 }
 
-#splitText:hover > .letter:nth-child(6) {
+.mainContent > h1:hover > #splitText > .letter:nth-child(6) {
     transform: translate(0%, 20%) rotate(-3deg);
 }
 
-#splitText:hover > .letter:nth-child(7) {
+.mainContent > h1:hover > #splitText > .letter:nth-child(7) {
     transform: translate(0%, -40%) rotate(-5deg);
 }
 
@@ -134,10 +138,7 @@ p {
     }
 }
 
-@media screen and (min-width: 750px) and (max-width: 959px) {
-    .mainContent {
-        top: 50%;
-    }
+@media screen and (min-width: 400px) and (max-width: 959px) {
     h1 {
         font-size: 2.5rem;
     }
@@ -146,57 +147,23 @@ p {
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 749px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    p {
-        font-size: 1.25rem;
-    }
+@media screen and (max-width: 749px) {
     .mainContent {
-        top: 50%;
-        padding: 0 50px;
-    }
-}
-
-@media screen and (min-width: 500px) and (max-width: 599px) {
-    h1 {
-        font-size: 3.5rem;
-    }
-    p {
-        font-size: 1.25rem;
-    }
-    .mainContent {
-        top: 50%;
-        padding: 0 50px;
-    }
-}
-
-@media screen and (min-width: 400px) and (max-width: 499px) {
-    h1 {
-        font-size: 3rem;
-    }
-    p {
-        font-size: 1.25rem;
-    }
-    .mainContent {
-        top: 50%;
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 200px) and (max-width: 399px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     p {
-        font-size: 1.25rem;
-    }
-    .mainContent {
-        top: 50%;
-        padding: 0 50px;
+        font-size: 1rem;
     }
     .learnBtn {
         font-size: 1rem;
+    }
+    .mainContent {
+        padding: 0 25px;
     }
 }
