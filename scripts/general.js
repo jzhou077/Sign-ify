@@ -20,7 +20,6 @@ function hideMenu() {
     let tl = gsap.timeline();
     tl.to(".menu", {autoAlpha: 0, duration: 1, ease: "slow"}, 'start');
     tl.to(".navigation-item a", {yPercent: -100, duration: 0.5, ease: "slow"}, 'start');
-    tl.to(".secondary-nav-links", {opacity: 0, duration: 0.5, ease: "slow"}, 'start');
     tl.to(".menu-btn span", {autoAlpha: 0, xPercent: -25, duration: 0.05, ease: "power1"}, 'start');
     tl.to(".menu-btn span", {onStart: function(){ $(".menu-btn span").html("menu") }, autoAlpha: 1, xPercent: 0, duration: 0.05, delay: 0.5, ease: "slow", clearProps: "opacity"}, 'start');
     $(".menu").toggleClass("menu-shown");
