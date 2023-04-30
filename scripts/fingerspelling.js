@@ -91,8 +91,10 @@ async function predictWebcam() {
         //checks if the predicted asl letter corresponds with the letter that the user chose
         //if so, then it will move on to the next letter
         if (lettersToSpell[0].innerHTML === prediction && confidence > 50) {
+            $(lettersToSpell[0]).toggleClass("blinking");
             gsap.to(lettersToSpell[0], {color: "white", duration: 0.25});
             lettersToSpell.shift();
+            $(lettersToSpell[0]).toggleClass("blinking");
         }
     }
 
@@ -110,6 +112,8 @@ function splitLetters(text, target) {
         span.innerText = letter;
         element.appendChild(span);
     });
+
+    $("#chosen-word > span:nth-child(1)").toggleClass("blinking");
 }
 
 //preloader

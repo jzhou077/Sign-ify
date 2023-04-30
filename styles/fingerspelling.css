@@ -320,6 +320,22 @@ button:hover {
     transition-duration: 500ms;
 }
 
+@keyframes blink {
+    from {
+        color: transparent;
+    }
+    50% {
+        color: white;
+    }
+    to {
+        color: transparent;
+    }
+}
+
+.blinking {
+    animation: blink 2s linear infinite;
+}
+
 @media screen and (min-width: 750px) and (max-width: 1368px) {
     .instructions-content {
         padding: 0 80px;
