@@ -1,8 +1,9 @@
 //preloader
 $(window).on("load", function() {
-    let tl = gsap.timeline();
-    tl.to(".preloader", {autoAlpha: 0, delay: 0.5, duration: 1, ease: "slow"});
-    tl.fromTo(".menu-btn", {autoAlpha: 0, yPercent: -10}, {autoAlpha: 1, yPercent: 0, duration: 0.5, ease: "slow"}, 'together');
+    let tl = gsap.timeline({ease: "slow"});
+    tl.to(".preloader", {autoAlpha: 0, delay: 0.5, duration: 1});
+    tl.fromTo(".menu-btn", {autoAlpha: 0, yPercent: -10}, {autoAlpha: 1, yPercent: 0, duration: 0.5});
+    tl.from(".anim", {autoAlpha: 0, yPercent: 20, duration: 1, stagger: 0.25});
 });
 
 $(document).ready(function() {
