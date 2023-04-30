@@ -244,6 +244,81 @@ button:hover {
     transform: translateX(-50%) rotate(225deg);
 }
 
+.error-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 75vw;
+    max-width: 750px;
+    aspect-ratio: 4/3;
+    z-index: 50;
+    background-color: #141414;
+    padding: 25px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(56, 56, 56);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-close-btn {
+    /* relative to parent element */
+    position: fixed;
+    top: 10%;
+    right: 4%;
+}
+
+.error-modal > .top {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-modal > .bottom {
+    height: 50%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.error-modal > .bottom > h1 {
+    font-size: 3rem;
+}
+
+.error-modal > .bottom > p {
+    font-size: 1rem;
+    margin: 15px 0;
+    inline-size: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.error-modal > .bottom > button {
+    font-size: 1rem;
+    padding: 0.75em 3em;
+}
+
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 49;
+    transition-duration: 500ms;
+}
+
 @media screen and (min-width: 750px) and (max-width: 1368px) {
     .instructions-content {
         padding: 0 80px;
@@ -272,6 +347,21 @@ button:hover {
     #camera-btn {
         font-size: 1.1rem;
     }
+    .error-symbol {
+        height: 100px;
+    }
+    .error-modal > .bottom > h1 {
+        font-size: 2.25rem;
+    }
+    
+    .error-modal > .bottom > p {
+        font-size: 0.9rem;
+    }
+    
+    .error-modal > .bottom > button {
+        font-size: 0.9rem;
+        padding: 0.75em 2.5em;
+    }
 }
 
 @media screen and (min-width: 200px) and (max-width: 399px) {
@@ -286,6 +376,29 @@ button:hover {
     }
     #camera-btn {
         font-size: 1rem;
+    }
+    .error-modal > .bottom > h1 {
+        font-size: 1.75rem;
+    }
+    
+    .error-modal > .bottom > p {
+        font-size: 0.7rem;
+        inline-size: 100%;
+        margin: 10px 0;
+    }
+    
+    .error-modal > .bottom > button {
+        font-size: 0.7rem;
+        padding: 0.6em 2.25m;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .error-modal {
+        aspect-ratio: 3/4;
+    }
+    .error-symbol {
+        height: 100px;
     }
 }
 

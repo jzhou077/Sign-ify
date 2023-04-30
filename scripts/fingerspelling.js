@@ -34,7 +34,8 @@ function enableCam(event) {
     }
 
     const constraints = {
-        video: true
+        video: true, 
+        facingMode: "user",
     };
 
     //starts playing information from the camera on the video tag 
@@ -42,7 +43,10 @@ function enableCam(event) {
     navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
         video.srcObject = stream;
         video.addEventListener("loadeddata", predictWebcam);
-    })
+    }, function() {
+        gsap.to(".error-modal", {autoAlpha: 1, scale: 1, duration: 0.5}, "together");
+        $(".overlay").css({"visibility":"visible", "opacity":"0.25"});
+    });
 }
 
 //classifies the gestures into ASL letters
@@ -129,6 +133,10 @@ $(document).ready(function(){
             }});
         });
     }
+
+    $("#reload-btn").click(() => {
+        location.reload();
+    })
 
     $("#open-letters-btn").click(function() {
         gsap.to("#asl-letters", {top: "0", duration: 1, ease: "none", delay: 0});
