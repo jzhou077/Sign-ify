@@ -143,12 +143,12 @@ p {
 }
 
 #sec1-content > h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     z-index: 2;
 }
 
 #sec1-content > p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     inline-size: 75vw;
     margin: 20px;
 }
@@ -161,14 +161,15 @@ p {
     #hero > p {
         font-size: 1.5rem;
     }
-    
     #sec1-content > h1 {
-        font-size: 3rem;
+        font-size: 4.25rem;
     }
-
     #sec1-content > p {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         inline-size: 80vw;
+    }
+    .big-text {
+        font-size: 10vw;
     }
 }
 
@@ -178,12 +179,15 @@ p {
     }
 
     #sec1-content > h1 {
-        font-size: 2.5rem;
+        font-size: 3.75rem;
     }
 
     #sec1-content > p {
         font-size: 1.1rem;
         inline-size: 85vw;
+    }
+    .big-text {
+        font-size: 11vw;
     }
 }
 
@@ -197,12 +201,15 @@ p {
     }
 
     #sec1-content > h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     #sec1-content > p {
-        font-size: 1rem;
+        font-size: 0.95rem;
         inline-size: 85vw;
+    }
+    .big-text {
+        font-size: 11.5vw;
     }
 }
 
@@ -216,11 +223,14 @@ p {
     }
 
     #sec1-content > h1 {
-        font-size: 1.5rem;
+        font-size: 2.75rem;
     }
 
     #sec1-content > p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         inline-size: 90vw;
+    }
+    .big-text {
+        font-size: 13vw;
     }
 }

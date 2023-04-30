@@ -192,18 +192,22 @@ a {
     .menu-btn {
         top: 7.5%;
     }
+    .menu-btn > span {
+        font-size: 0.7rem;
+    }
 }
 
 @media screen and (min-width: 200px) and (max-width: 449px) {
     .menu-main-sec {
         padding: 0;
     }
-
     .primary-nav-links {
         font-size: 2rem;
     }
-
     .menu-btn {
         top: 6%;
+    }
+    .menu-btn > span {
+        font-size: 0.6rem;
     }
 }

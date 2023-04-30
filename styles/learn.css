@@ -34,15 +34,16 @@ p {
 }
 
 .hero-main-content > h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 2.5px;
     text-shadow: 2px 5px black;
 }
 
 .hero-main-text {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
     inline-size: 75vw;
+    max-width: 1000px;
     margin: 20px 0;
 }
 
@@ -91,7 +92,7 @@ p {
 }
 
 .sec1-content > h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     position: relative;
     left: -175%;
     color: var(--dark-secondary-color);
@@ -107,7 +108,7 @@ p {
     border: 2px solid var(--dark-secondary-color);
     border-radius: 2em;
     color: var(--dark-secondary-color);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     inline-size: 75vw;
 }
 
@@ -165,7 +166,7 @@ p {
 
 .horizontal-content > h1 {
     position: relative;
-    font-size: 2.5rem;
+    font-size: 4rem;
     opacity: 1;
     text-shadow: 2px 5px black;
 }
@@ -227,22 +228,27 @@ p {
     letter-spacing: 2px;
 }
 
-@media screen and (min-width: 960px) and (max-width: 1368px) {
-    .hero-main-content > h1 {
-        font-size: 3rem;
+@media screen and (min-width: 960px) and (max-width: 1368px){
+    .sec1-content > h1 {
+        font-size: 4.5rem;
     }
-    .hero-main-text {
-        font-size: 1.5rem;
+    .sec1-content > p {
+        font-size: 1.25rem;
     }
-    
-    .hero-secondary-text {
+    .horizontal-content > h1 {
+        font-size: 3.5rem;
+    }
+    .horizontal-content > p {
+        font-size: 1.1rem;
+    }
+    .horizontal-content > a {
         font-size: 1.25rem;
     }
 }
 
 @media screen and (min-width: 400px) and (max-width: 959px) {
     .hero-main-content > h1 {
-        font-size: 2.5rem;
+        font-size: 4.25rem;
     }
     
     .hero-main-text {
@@ -254,11 +260,11 @@ p {
     }
 
     .sec1-content > h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     
     .sec1-content > p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     #sec2 > h1 {
@@ -266,7 +272,7 @@ p {
     }
 
     .horizontal-content > h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .horizontal-content > p {
@@ -280,7 +286,7 @@ p {
 
 @media screen and (min-width: 400px) and (max-width: 750px) {
     .horizontal-content > h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .horizontal-content > p {
@@ -304,7 +310,7 @@ p {
 
 @media screen and (min-width: 200px) and (max-width: 399px) {
     .hero-main-content > h1 {
-        font-size: 2rem;
+        font-size: 3.25rem;
     }
     
     .hero-main-text {
@@ -312,11 +318,11 @@ p {
     }
     
     .hero-secondary-text {
-        font-size: 0.75rem;
+        font-size: 0.85rem;
     }
 
     .sec1-content > h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     
     .sec1-content > p {
@@ -328,11 +334,11 @@ p {
     }
 
     .horizontal-content > h1 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .horizontal-content > p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .horizontal-content > a {

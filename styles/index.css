@@ -1,5 +1,5 @@
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 2px;
     font-weight: bold;
     text-shadow: 0px 0px 5px white;
@@ -7,10 +7,11 @@ h1 {
 }
 
 p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 100;
     margin: 35px 0 30px 0;
     inline-size: 75vw;
+    max-width: 1200px;
 }
 
 @keyframes rotate {
@@ -59,7 +60,7 @@ p {
     flex-wrap: wrap;
     align-items: center;
     position: relative;
-    top: 55%;
+    top: 50%;
     left: 50%;
     translate: -50% -50%;
     text-align: center;
@@ -130,20 +131,23 @@ p {
 
 @media screen and (min-width: 960px) and (max-width: 1368px) {
     h1 {
-        font-size: 3rem;
+        font-size: 4.5rem;
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 
 @media screen and (min-width: 400px) and (max-width: 959px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     p {
         font-size: 1.25rem;
+    }
+    .learnBtn {
+        font-size: 1.15rem;
     }
 }
 
@@ -155,10 +159,10 @@ p {
 
 @media screen and (min-width: 200px) and (max-width: 399px) {
     h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     .learnBtn {
         font-size: 1rem;

@@ -45,11 +45,11 @@ p {
 }
 
 .instructions-content > h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .instructions-content > p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     max-width: 900px;
     margin: 35px 0 30px 0;
 }
@@ -73,7 +73,7 @@ button:hover {
 
 #camera-btn {
     padding: 10px 30px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     border-width: 2px;
     align-self: center;
 }
@@ -176,7 +176,7 @@ button:hover {
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     font-style: italic;
-    font-size: 17.5vw;
+    font-size: 25vw;
     letter-spacing: 1vw;
     color: transparent;
     -webkit-text-stroke: 1px #ffffff;
@@ -193,6 +193,7 @@ button:hover {
     height: 100vh;
     background: var(--dark-bg-color) url("../images/asl-letters.png") no-repeat center;
     z-index: 98;
+    background-size: 50%;
 }
 
 #open-letters-btn {
@@ -324,13 +325,19 @@ button:hover {
         padding: 0 80px;
     }
     .instructions-content > h1{
-        font-size: 3rem;
+        font-size: 4rem;
     }
     .instructions-content > p {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
     #camera-btn {
         font-size: 1.25rem;
+    }
+    #asl-letters {
+        background-size: 60%;
+    }
+    .big-text {
+        font-size: 30vw;
     }
 }
 
@@ -339,10 +346,10 @@ button:hover {
         padding: 0 50px;
     }
     .instructions-content > h1{
-        font-size: 2.5rem;
+        font-size: 3.25rem;
     }
     .instructions-content > p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     #camera-btn {
         font-size: 1.1rem;
@@ -362,6 +369,12 @@ button:hover {
         font-size: 0.9rem;
         padding: 0.75em 2.5em;
     }
+    #asl-letters {
+        background-size: 75%;
+    }
+    .big-text {
+        font-size: 35vw;
+    }
 }
 
 @media screen and (min-width: 200px) and (max-width: 399px) {
@@ -369,7 +382,7 @@ button:hover {
         padding: 0 20px;
     }
     .instructions-content > h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .instructions-content > p {
         font-size: 1rem;
@@ -386,10 +399,16 @@ button:hover {
         inline-size: 100%;
         margin: 10px 0;
     }
-    
+
     .error-modal > .bottom > button {
         font-size: 0.7rem;
         padding: 0.6em 2.25m;
+    }
+    #asl-letters {
+        background-size: 95%;
+    }
+    .big-text {
+        font-size: 35vw;
     }
 }
 
