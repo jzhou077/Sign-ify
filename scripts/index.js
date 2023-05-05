@@ -16,7 +16,7 @@ $(window).on("load", function() {
     let tl = gsap.timeline({ease: "slow"});
     tl.to(".preloader", {autoAlpha: 0, delay: 0.5, duration: 1});
     tl.from(".menu-btn", {autoAlpha: 0, yPercent: -10, duration: 0.5});
-    tl.from(".anim", {autoAlpha: 0, yPercent: 20, duration: 1, stagger: 0.1});
+    tl.from(".intro-anim", {autoAlpha: 0, yPercent: 20, duration: 1, stagger: 0.1});
     tl.fromTo(".learnBtn", {autoAlpha: 0}, {autoAlpha: 1, duration: 0.25});
 })
 
