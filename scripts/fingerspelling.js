@@ -85,7 +85,8 @@ async function predictWebcam() {
 
         //if the character is a space, then move on
         if (lettersToSpell[0].innerHTML === " ") {
-            lettersToSpell.shift()
+            lettersToSpell.shift();
+            $(lettersToSpell[0]).toggleClass("blinking");
         }
 
         //checks if the predicted asl letter corresponds with the letter that the user chose
